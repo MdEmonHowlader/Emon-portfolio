@@ -1,437 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">ME</div>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo"><a href="#home">Md.Emon</a></div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <!-- <li><a href="#testimonials">Testimonials</a></li> -->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
       <div class="menu">
-          <i class="fa-solid fa-bars "></i>
+        <i class="fa-solid fa-bars "></i>
       </div>
-      </nav>
-    </header>
+    </nav>
+  </header>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="container">
-          <div class="hero-content">
-            <h1 class="fade-in">Md. Emon</h1>
-            <h2 class="slide-in">Laravel Developer</h2>
-            <p class="fade-in">
-              I am a dedicated and passionate Laravel Developer with hands-on
-              experience in building and managing dynamic web applications.
-            </p>
-            
-            <div class="cta-buttons">
-              <a href="" class="btn primary">View Resume</a>
-              <a href="#contact" class="btn secondary">Contact Me</a>
-            </div>
-          </div>
-          <div class="hero-image">
-            <img
-              src="./emon.png"
-              alt="Md Emon - Web Developer"
-            />
-          </div>
+  <main>
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="fade-in">Md. Emon</h1>
+      <h2 class="slide-in">Laravel Developer</h2>
+      <p class="fade-in">
+        I am a dedicated and passionate Laravel Developer with hands-on experience in building and managing dynamic web applications.
+      </p>
+      <div class="cta-buttons">
+        <a href="./resume.pdf" class="btn primary">View Resume</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="./emon.jpg" alt="Md. Emon - Laravel Developer" class="profile-img">
+      <div class="image-overlay"></div>
+    </div>
+  </div>
+</section>
+
+    <section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">My Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-code"></i>
         </div>
-      </section>
-
-      <section id="services" class="services">
-        <div class="container">
-          <h2>My Services</h2>
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fas fa-code"></i>
-              <h3>Laravel Developer</h3>
-              <p>
-                Creating responsive and user-friendly websites using modern HTML
-                and CSS techniques.
-              </p>
-            </div>
-            <div class="service-card">
-              <i class="fas fa-mobile"></i>
-              <h3>PHP Developer</h3>
-              <p>
-                Building dynamic web applications with PHP and MySQL for a
-                seamless user experience.
-              </p>
-            </div>
-
-            <div class="service-card">
-              <i class="fas fa-lock"></i>
-              <h3>System Architecture</h3>
-              <p>
-                Designing scalable and secure systems with a focus on performance
-                and reliability.
-              </p>
-            </div>
-         
-            <div class="service-card">
-              <i class="fas fa-mobile-alt"></i>
-              <h3>React and Veu Js Developer</h3>
-              <p>
-                Building dynamic and interactive web applications with React for
-                a seamless user experience.
-              </p>
-            </div>
-
-            <div class="service-card">
-              <i class="fas fa-cogs"></i>
-              <h3>Web Development</h3>
-              <p>
-                Building scalable and efficient web applications with a focus on
-                performance and user experience.
-              </p>  
-            </div>
-          
-            <div class="service-card">
-              <i class="fas fa-code-branch"></i>
-              <h3>Version Control</h3>
-              <p>
-                Using version control systems like Git to manage and track changes
-                in code.
-              </p>
-            </div>
-
-           
-            <div class="service-card">
-              <i class="fas fa-mobile-alt"></i>
-              <h3>Responsive Design</h3>
-              <p>
-                Ensuring websites work perfectly across all devices and screen
-                sizes.
-              </p>
+        <h3>Laravel Development</h3>
+        <p>
+          Building robust, scalable, and secure web applications using Laravel, with a focus on clean code and user-friendly interfaces.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-server"></i>
+        </div>
+        <h3>PHP & MySQL Development</h3>
+        <p>
+          Creating dynamic web applications with PHP and MySQL, ensuring seamless functionality and efficient database management.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>React & Vue.js Development</h3>
+        <p>
+          Developing interactive and high-performance web applications using React and Vue.js for a modern, engaging user experience.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about" class="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="./emon.jpg" alt="Profile Picture" class="profile-img">
+        <div class="image-overlay"></div>
+      </div>
+      <div class="about-text">
+        <p>
+          I am a dedicated and passionate Laravel Developer with hands-on experience in building and managing dynamic web applications. Skilled in full-stack development with a specialization in Laravel, PHP, JavaScript, TailwindCSS, MySQL, and system architecture. Experienced in working on complex e-commerce projects, with a focus on scalable, efficient, and user-friendly solutions. Known for strong problem-solving skills, attention to detail, and commitment to delivering high-quality, maintainable code.
+        </p>
+        <div class="skills">
+          <div class="skill">
+            <span>Laravel</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 75%"></div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="about" class="about">
-        <div class="container">
-          <h2>About Me</h2>
-          <div class="about-content">
-            <div class="about-text">
-              <p>
-                I am a dedicated and passionate Laravel Developer with hands-on
-                experience in building and managing dynamic web applications.
-                Skilled in full-stack development with a specialization in
-                Laravel, PHP, JavaScript, TailwindCSS, MySQL, and system
-                architecture. Experienced in working on complex e-commerce
-                projects, with a focus on scalable, efficient, and user-friendly
-                solutions. Known for strong problem-solving skills, attention to
-                detail, and commitment to delivering high-quality, maintainable
-                code.
-              </p>
-              <div class="skills">
-                <div class="skill">
-                  <span>Laravel</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 75%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>PHP</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>JavaScript</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 65%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>MySQL</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%"></div>
-                  </div>
-                </div>
-
-
-                <div class="skill">
-                  <span>Bootstrap</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>TailwindCSS</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 85%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>jQuery</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>Git</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 75%"></div>
-                  </div>
-                </div>
-
-                <div class="skill">
-                  <span>Photoshop</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>HTML5</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 95%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>CSS3</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>UI/UX Design</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 85%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>Web Design</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>Web Development</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 75%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>Frontend Development</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>Backend Development</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 65%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>JavaScript</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <span>React</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 75%"></div>
-                  </div>
-                  </div>
-              </div>
+          <div class="skill">
+            <span>PHP</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>MySQL</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>React</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 75%"></div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="education" class="education">
+  <div class="container">
+    <h2 class="section-title">Education & Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item timeline-item-left">
+        <div class="timeline-content">
+          <h3>Bachelor in Computer Science</h3>
+          <p class="timeline-date">2022 - 2026</p>
+          <p>Daffodil International University</p>
+        </div>
+      </div>
+      <div class="timeline-item timeline-item-right">
+        <div class="timeline-content">
+          <h3>Higher Secondary School Certificate</h3>
+          <p class="timeline-date">2019 - 2021</p>
+          <p>Science</p>
+          <p>Mahilara Degree College</p>
+        </div>
+      </div>
+      <div class="timeline-item timeline-item-left">
+        <div class="timeline-content">
+          <h3>Secondary School Certificate</h3>
+          <p class="timeline-date">2017 - 2019</p>
+          <p>Science</p>
+          <p>Mahilara A. AN High School</p>
+        </div>
+      </div>
+      <div class="timeline-item timeline-item-right">
+        <div class="timeline-content">
+          <h3>Web Development Certification</h3>
+          <p class="timeline-date">2023</p>
+          <p>Ostad Academy</p>
+        </div>
+      </div>
+      <div class="timeline-item timeline-item-left">
+        <div class="timeline-content">
+          <h3>Web Developer</h3>
+          <p class="timeline-date">2023 - 2025</p>
+          <p>Web Development Co.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <section id="education" class="education">
-        <div class="container">
-          <h2>Education & Experience</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3>Bachelor in Computer Science</h3>
-                <p class="timeline-date">2022 - 2026</p>
-                <p>Daffodil International University</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3>Higher Secondary School Certificate</h3>
-                <p class="timeline-date">2019-2021</p>
-                <p> Science</p>
-                <p>Mahilara Degree College</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3>Secondary School Certificate</h3>
-                <p class="timeline-date">2017-2019</p>
-                <p>Science</p>
-                <p>Mahilara A. AN High School</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3>Web Development Certification</h3>
-                <p class="timeline-date">2023</p>
-                <p>Ostad Academy</p>
-              </div>
-            </div>                
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3> Web Developer</h3>
-                <p class="timeline-date">2023 - 2025</p>
-                <p>Web Development Co.</p>
-              </div>
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title">Recent Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./project-banner-2.jpg" alt="E-commerce Website" />
+          <div class="project-overlay">
+            <!-- <a href="#" class="project-link">View Project</a> -->
           </div>
         </div>
-      </section>
-
-      <section id="projects" class="projects">
-        <div class="container">
-          <h2>Recent Projects</h2>
-          <div class="project-grid">
-            <div class="project-card">
-              <img
-                src="./project-banner-2.jpg"
-                alt="E-commerce Website"
-              />
-              <div class="project-content">
-                <h3>E-commerce Website</h3>
-                <p>
-                  A fully responsive e-commerce platform with modern design and
-                  smooth animations. Features include product filtering, cart
-                  management, and checkout process.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Laravel</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Bootstrap</span>
-                </div>
-              </div>
-            </div>
-            <div class="project-card">
-              <img
-                src="./pms.png"
-                alt="Portfolio Template"
-              />
-              <div class="project-content">
-                <h3>PMS at DIU</h3>
-                <p>
-                  A project management system for Daffodil International
-                  University to manage student projects, faculty, and
-                  departments.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Laravel</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">TailwindCSS</span>
-              
-                </div>
-              </div>
-            </div>
-            <div class="project-card">
-              <img
-                src="./erp.png"
-                alt="Restaurant Website"
-              />
-              <div class="project-content">
-                <h3>ERP</h3>
-                <p>
-                  An enterprise resource planning system for a restaurant to
-                  manage orders, inventory, and customer data.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Laravel</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  
-                </div>
-              </div>
-            </div>
-            <!-- <div class="project-card">
-              <img
-                src="./erp.png"
-                alt="Restaurant Website"
-              />
-              <div class="project-content">
-                <h3>ERP</h3>
-                <p>
-                  An enterprise resource planning system for a restaurant to
-                  manage orders, inventory, and customer data.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Laravel</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="project-card">
-              <img
-                src="./erp.png"
-                alt="Restaurant Website"
-              />
-              <div class="project-content">
-                <h3>ERP</h3>
-                <p>
-                  An enterprise resource planning system for a restaurant to
-                  manage orders, inventory, and customer data.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Laravel</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="project-card">
-              <img
-                src="./erp.png"
-                alt="Restaurant Website"
-              />
-              <div class="project-content">
-                <h3>ERP</h3>
-                <p>
-                  An enterprise resource planning system for a restaurant to
-                  manage orders, inventory, and customer data.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Laravel</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  
-                </div>
-              </div>
-            </div> -->
+        <div class="project-content">
+          <h3>E-commerce Website</h3>
+          <p>
+            A fully responsive e-commerce platform with modern design and smooth
+            animations. Features include product filtering, cart management, and
+            checkout process.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Laravel</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Bootstrap</span>
           </div>
         </div>
-      </section>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./pms.png" alt="Portfolio Template" />
+          <div class="project-overlay">
+            <!-- <a href="#" class="project-link">View Project</a> -->
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>PMS at DIU</h3>
+          <p>
+            A project management system for Daffodil International University to
+            manage student projects, faculty, and departments.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Laravel</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">TailwindCSS</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./erp.png" alt="Restaurant ERP" />
+          <div class="project-overlay">
+            <!-- <a href="#" class="project-link">View Project</a> -->
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Restaurant ERP</h3>
+          <p>
+            An enterprise resource planning system for a restaurant to manage
+            orders, inventory, and customer data.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Laravel</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./image.png" alt="Car Showroom Website" />
+          <div class="project-overlay">
+            <!-- <a href="#" class="project-link">View Project</a> -->
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Car Showroom Website</h3>
+          <p>
+            A modern car dealership platform with user authentication, car
+            management, and booking features.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">WordPress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <section id="testimonials" class="testimonials">
+    <!-- <section id="testimonials" class="testimonials">
         <div class="container">
           <h2>Client Testimonials</h2>
           <div class="testimonials-grid">
@@ -462,70 +291,65 @@
           
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2>Get In Touch</h2>
-          <div class="contact-content">
-            <div class="contact-info">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <p>emonhowlader676@gmail.com</p>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <h3>Phone</h3>
-                <p>01601394910</p>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-location-dot"></i>
-                <h3>Location</h3>
-                <p>Mirpur-1, Dhaka
-                </p>
-              </div>
-            </div>
-            <form class="contact-form">
-              <div class="form-group">
-                <input type="text" placeholder="Your Name" required />
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Your Email" required />
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Your Message" required></textarea>
-              </div>
-              <button type="submit" class="btn primary">Send Message</button>
-            </form>
-          </div>
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
         </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-social">
-            <a href="https://github.com/MdEmonHowlader"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/md-emon-b42654265/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/Emon317805?t=FJhOV9nTv8xZOjo95naFjg&s=09"><i class="fab fa-twitter"></i></a>
-          </div>
-          <p>&copy; 2025 Md. Emon. All rights reserved.</p>
-        </div>
+        <h3>Email</h3>
+        <p><a href="mailto:emonhowlader676@gmail.com">emonhowlader676@gmail.com</a></p>
       </div>
-    </footer>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Phone</h3>
+        <p><a href="tel:+8801601394910">+8801601394910</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-location-dot"></i>
+        </div>
+        <h3>Location</h3>
+        <p>Mirpur-1, Dhaka, Bangladesh</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuIcon = document.querySelector('.menu');
-        const navUl = document.querySelector('nav ul');
+  
 
-        menuIcon.addEventListener('click', function() {
-          navUl.classList.toggle('show');
-          menuIcon.classList.toggle('active');
-        });
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-social">
+          <a href="https://github.com/MdEmonHowlader"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/md-emon-b42654265/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/Emon317805?t=FJhOV9nTv8xZOjo95naFjg&s=09"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 Md. Emon. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuIcon = document.querySelector('.menu');
+      const navUl = document.querySelector('nav ul');
+
+      menuIcon.addEventListener('click', function () {
+        navUl.classList.toggle('show');
+        menuIcon.classList.toggle('active');
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
