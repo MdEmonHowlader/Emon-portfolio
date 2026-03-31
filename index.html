@@ -183,6 +183,82 @@
       <div class="container">
         <h2 class="section-title">Recent Projects</h2>
         <div class="project-grid">
+
+            <div class="project-card">
+            <div class="project-image">
+              <img src="./e-fc.png" alt="E-commerce Website" />
+              <div class="project-overlay">
+                <!-- <a href="#" class="project-link">View Project</a> -->
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>E-Family Court – National e-Judiciary Platform</h3>
+              <p>
+                Developed a comprehensive e-Family Court system as part of the National e-Judiciary Platform, streamlining
+                family court processes and enhancing access to justice. Implemented features for case management,
+                document handling, scheduling, and communication between parties, with a focus on user-friendly design
+                and secure data handling.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Inertia.js</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./tbz.png" alt="E-commerce Website" />
+              <div class="project-overlay">
+                <!-- <a href="#" class="project-link">View Project</a> -->
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>E-commerce Site- TBZ </h3>
+              <p>
+                Developed a scalable e-commerce platform using Laravel (backend) and React.js with Inertia.js (frontend) with a modular architecture
+                and Repository Pattern for maintainability and scalability.
+                Implemented MySQL database, Redis caching, and Laravel Queue Management to optimize performance and efficiently process background tasks.
+                Integrated third-party services including SSLCommerz payment gateway for secure transactions and an SMS gateway for automated notifications.
+                Built SEO-optimized architecture, implemented Service Workers for frontend optimization, and developed custom analytics for user activity tracking, with support for future AI chatbot integration.
+               
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Inertia.js</span>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./eSchoolie.png" alt="E-commerce Website" />
+              <div class="project-overlay">
+                <!-- <a href="#" class="project-link">View Project</a> -->
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>eSchoolie Tuition Platform</h3>
+              <p>
+                Developed a comprehensive online tuition platform, eSchoolie, using Laravel for the backend and React.js with Inertia.js for the frontend. The platform features a modular architecture and Repository Pattern for maintainability and scalability. Implemented MySQL database, Redis caching, and Laravel Queue Management to optimize performance and efficiently process background tasks. Integrated third-party services including SSLCommerz payment gateway for secure transactions and an SMS gateway for automated notifications. Built SEO-optimized architecture, implemented Service Workers for frontend optimization, and developed custom analytics for user activity tracking, with support for future AI chatbot integration.  
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Inertia.js</span>
+              </div>
+            </div>
+          </div>
+       
+
           <div class="project-card">
             <div class="project-image">
               <img src="./project-banner-2.jpg" alt="E-commerce Website" />
@@ -234,10 +310,10 @@
               </div>
             </div>
             <div class="project-content">
-              <h3>ERP</h3>
+              <h3>ERP-Based POS & Inventory Management System</h3>
               <p>
-                An enterprise resource planning system for to manage
-                orders, inventory, and customer data.
+               Developed a comprehensive ERP-based POS and Inventory Management System using Laravel for the backend and React.js with Inertia.js for the frontend. The system features a modular architecture and Repository Pattern for maintainability and scalability. Implemented MySQL database, Redis caching, and Laravel Queue Management to optimize performance and efficiently process background tasks. Integrated third-party services including SSLCommerz payment gateway for secure transactions and an SMS gateway for automated notifications. Built SEO-optimized architecture, implemented Service Workers for frontend optimization, and developed custom analytics for user activity tracking, with support for future AI chatbot integration.
+
               </p>
               <div class="project-tech">
                 <span class="tech-tag">Laravel</span>
@@ -376,6 +452,42 @@
       menuIcon.addEventListener('click', function () {
         navUl.classList.toggle('show');
         menuIcon.classList.toggle('active');
+      });
+
+      const projectDescriptions = document.querySelectorAll('.project-content p');
+
+      projectDescriptions.forEach(function (paragraph) {
+        if (paragraph.textContent.trim().length <= 220) {
+          return;
+        }
+
+        paragraph.classList.add('collapsible-description', 'collapsed');
+        paragraph.setAttribute('role', 'button');
+        paragraph.setAttribute('tabindex', '0');
+        paragraph.setAttribute('aria-expanded', 'false');
+        paragraph.setAttribute('title', 'Click to read full description');
+
+        const toggleLabel = document.createElement('span');
+        toggleLabel.className = 'description-toggle-label';
+        toggleLabel.textContent = 'Read more';
+        paragraph.insertAdjacentElement('afterend', toggleLabel);
+
+        const toggleDescription = function () {
+          const isExpanded = paragraph.classList.toggle('expanded');
+          paragraph.classList.toggle('collapsed', !isExpanded);
+          paragraph.setAttribute('aria-expanded', String(isExpanded));
+          toggleLabel.textContent = isExpanded ? 'Show less' : 'Read more';
+        };
+
+        paragraph.addEventListener('click', toggleDescription);
+        paragraph.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleDescription();
+          }
+        });
+
+        toggleLabel.addEventListener('click', toggleDescription);
       });
     });
   </script>

@@ -665,11 +665,12 @@ nav a:hover {
     left: -12px !important;
   }
 }
+
 /* recent projects section */
 
 .projects {
   padding: 4rem 0;
-    background: linear-gradient(135deg, #f0f4f8 0%, #e1e7ed 100%);
+  background: linear-gradient(135deg, #f0f4f8 0%, #e1e7ed 100%);
 }
 
 .container {
@@ -784,6 +785,33 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
+.project-content p.collapsible-description {
+  cursor: pointer;
+}
+
+.project-content p.collapsible-description.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.description-toggle-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #007bff;
+  cursor: pointer;
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.description-toggle-label:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -863,7 +891,7 @@ nav a:hover {
 /* contact section */
 .contact {
   padding: 4rem 0;
-    background: linear-gradient(135deg, #f0f4f8 0%, #e1e7ed 100%);
+  background: linear-gradient(135deg, #f0f4f8 0%, #e1e7ed 100%);
 }
 
 .container {
