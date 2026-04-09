@@ -36,11 +36,17 @@
 
   <main>
     <section id="home" class="hero">
+      <div class="hero-sports-bg" aria-hidden="true">
+        <div class="goal-3d"></div>
+        <div class="football-3d">
+          <i class="fa-solid fa-futbol"></i>
+        </div>
+      </div>
       <div class="container">
         <div class="hero-content">
           <h1 class="fade-in">Md. Emon</h1>
           <h2 class="slide-in">Laravel Developer</h2>
-          <p class="fade-in">
+          <p class="fade-in hero-description">
             I am Full Stack Developer experienced in building scalable web applications using PHP,
             Laravel, JavaScript, and React.js. Skilled in designing maintainable systems with modular
             architecture, RESTful APIs, and efficient database management, along with performance
@@ -556,6 +562,25 @@
         menuIcon.addEventListener('click', function () {
           navUl.classList.toggle('show');
           menuIcon.classList.toggle('active');
+        });
+      }
+
+      const heroDescription = document.querySelector('.hero-description');
+      if (heroDescription && heroDescription.textContent.trim().length > 260) {
+        heroDescription.classList.add('collapsed');
+        heroDescription.setAttribute('aria-expanded', 'false');
+
+        const heroReadMoreButton = document.createElement('button');
+        heroReadMoreButton.type = 'button';
+        heroReadMoreButton.className = 'hero-read-more';
+        heroReadMoreButton.textContent = 'Read more';
+        heroDescription.insertAdjacentElement('afterend', heroReadMoreButton);
+
+        heroReadMoreButton.addEventListener('click', function () {
+          const isExpanded = heroDescription.classList.toggle('expanded');
+          heroDescription.classList.toggle('collapsed', !isExpanded);
+          heroDescription.setAttribute('aria-expanded', String(isExpanded));
+          heroReadMoreButton.textContent = isExpanded ? 'Show less' : 'Read more';
         });
       }
 
