@@ -978,6 +978,11 @@ nav a:hover {
 }
 
 .project-link {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -985,6 +990,14 @@ nav a:hover {
   background: #00d4b4;
   border-radius: 25px;
   transition: background 0.3s ease;
+  touch-action: manipulation;
+}
+
+.project-link::before {
+  content: "\f06e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.85rem;
 }
 
 .project-link:hover {
@@ -1069,13 +1082,20 @@ nav a:hover {
   .project-card img {
     height: 180px;
   }
+}
 
+@media (hover: none),
+(pointer: coarse) {
   .project-overlay {
     opacity: 1;
     pointer-events: auto;
     align-items: flex-end;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.08));
     padding-bottom: 1rem;
+  }
+
+  .project-link {
+    min-height: 44px;
   }
 }
 
