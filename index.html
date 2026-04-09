@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
-<body>
+<body class="theme-dark">
   <header>
     <nav>
       <div class="logo"><a href="#home">Md.Emon</a></div>
@@ -23,8 +23,13 @@
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="menu">
-        <i class="fa-solid fa-bars "></i>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Change color theme" title="Change color theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <div class="menu">
+          <i class="fa-solid fa-bars "></i>
+        </div>
       </div>
     </nav>
   </header>
@@ -501,13 +506,58 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      const body = document.body;
       const menuIcon = document.querySelector('.menu');
       const navUl = document.querySelector('nav ul');
+      const themeToggleButton = document.querySelector('.theme-toggle');
+      const themeToggleIcon = themeToggleButton ? themeToggleButton.querySelector('i') : null;
 
-      menuIcon.addEventListener('click', function () {
-        navUl.classList.toggle('show');
-        menuIcon.classList.toggle('active');
-      });
+      const themeOrder = ['theme-light', 'theme-dark', 'theme-navy'];
+      const themeIconMap = {
+        'theme-light': 'fa-sun',
+        'theme-dark': 'fa-moon',
+        'theme-navy': 'fa-water'
+      };
+
+      const applyTheme = function (themeName) {
+        themeOrder.forEach(function (themeClass) {
+          body.classList.remove(themeClass);
+        });
+
+        body.classList.add(themeName);
+
+        if (themeToggleIcon) {
+          themeToggleIcon.classList.remove('fa-sun', 'fa-moon', 'fa-water');
+          themeToggleIcon.classList.add(themeIconMap[themeName]);
+        }
+
+        localStorage.setItem('portfolioTheme', themeName);
+      };
+
+      const savedTheme = localStorage.getItem('portfolioTheme');
+      if (savedTheme && themeOrder.includes(savedTheme)) {
+        applyTheme(savedTheme);
+      } else {
+        applyTheme('theme-dark');
+      }
+
+      if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', function () {
+          const currentTheme = themeOrder.find(function (themeClass) {
+            return body.classList.contains(themeClass);
+          }) || 'theme-dark';
+          const currentIndex = themeOrder.indexOf(currentTheme);
+          const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length];
+          applyTheme(nextTheme);
+        });
+      }
+
+      if (menuIcon) {
+        menuIcon.addEventListener('click', function () {
+          navUl.classList.toggle('show');
+          menuIcon.classList.toggle('active');
+        });
+      }
 
       const projectDescriptions = document.querySelectorAll('.project-content p');
 
