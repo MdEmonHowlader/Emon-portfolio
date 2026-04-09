@@ -960,6 +960,7 @@ nav a:hover {
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -968,6 +969,12 @@ nav a:hover {
 
 .project-card:hover .project-overlay {
   opacity: 1;
+  pointer-events: auto;
+}
+
+.project-card:focus-within .project-overlay {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .project-link {
@@ -1061,6 +1068,14 @@ nav a:hover {
 
   .project-card img {
     height: 180px;
+  }
+
+  .project-overlay {
+    opacity: 1;
+    pointer-events: auto;
+    align-items: flex-end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.08));
+    padding-bottom: 1rem;
   }
 }
 
